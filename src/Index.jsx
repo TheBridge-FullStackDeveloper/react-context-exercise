@@ -1,11 +1,9 @@
 import { useContext } from "react";
 import { BeerContext } from "../Context/BeerContext";
-import { Link } from "react-router-dom";
+import { BeerCardIndex } from "./BeerCardIndex";
 
 export function Index() {
   const { beerData, isLoading } = useContext(BeerContext);
-
-  console.log("beer Data", beerData);
 
   if (isLoading) {
     return <h1>Loading</h1>;
@@ -14,15 +12,18 @@ export function Index() {
   return (
     <>
       <h1>Beer list</h1>
-      <ul>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          gap: 100,
+        }}
+      >
         {beerData?.map((singleBeer, index) => {
-          return (
-            <li key={index}>
-              <Link to={singleBeer.id.toString()}>{singleBeer.name}</Link>
-            </li>
-          );
+          return <BeerCardIndex singleBeer={singleBeer} index={index} />;
         })}
-      </ul>
+      </div>
     </>
   );
 }
