@@ -1,8 +1,6 @@
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 import { useContext } from "react";
@@ -25,29 +23,53 @@ export function MediaCard() {
     return <p>Beer not found</p>;
   }
   return (
-    <Card sx={{ maxWidth: 345 }} style={{ margin: 20 }}>
+    <Card
+      sx={{
+        maxWidth: 345,
+        marginRight: "auto",
+        marginLeft: "auto",
+        marginTop: 5,
+        marginBottom: 5,
+      }}
+    >
       <CardMedia
         sx={{
           height: 300,
           maxWidth: 300,
           maxHeight: 300,
           backgroundSize: "contain",
+          textAlign: "center",
         }}
         image={beer.image_url}
         title={beer.name}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          style={{ textAlign: "center" }}
+        >
           {beer.name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          <p>Description: {beer.description}</p>
+        <Typography variant="body2" color="text.secondary" component="div">
+          <p>
+            <b>Tagline:</b> {beer.tagline}
+          </p>
+          <p>
+            <b>First brewed:</b> {beer.first_brewed}
+          </p>
+          <p>
+            <b>Description:</b> {beer.description}
+          </p>
+          <p>
+            <b>Abv:</b> {beer.abv}
+          </p>
+          <p>
+            <b>Volume:</b> {beer.volume.value} litres
+          </p>
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }
