@@ -27,7 +27,12 @@ export function MediaCard() {
   return (
     <Card sx={{ maxWidth: 345 }} style={{ margin: 20 }}>
       <CardMedia
-        sx={{ height: 300 }}
+        sx={{
+          height: 300,
+          maxWidth: 300,
+          maxHeight: 300,
+          backgroundSize: "contain",
+        }}
         image={beer.image_url}
         title={beer.name}
       />
