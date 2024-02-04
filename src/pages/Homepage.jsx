@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { BeerContext } from "../Context/BeerContext";
+import { Link } from "react-router-dom";
 
 export const Homepage = () => {
   const {beerData, isLoading} = useContext(BeerContext)
@@ -26,12 +27,13 @@ export const Homepage = () => {
             The beer of the moment:
           </p>
           {randomBeer && (
-            <div className="text-center mt-4 max-w-[400px] mx-auto">
+          <Link to={`gallery/${randomBeer.id}`}>
+          <div className="text-center mt-4 max-w-[400px] mx-auto">
               <p className="text-lg font-bold">{randomBeer.name}</p>
               <p>{randomBeer.tagline}</p>
               <img src={randomBeer.image_url} alt={randomBeer.name} className="w-full h-80 object-contain mb-4 rounded-md"/>
-              <p className="text-justify">{randomBeer.description}</p>
             </div>
+            </Link>
           )}
         </div>
       )}
