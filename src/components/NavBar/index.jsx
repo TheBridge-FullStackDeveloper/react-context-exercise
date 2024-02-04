@@ -17,12 +17,6 @@ export const NavBar = () => {
             <Link to="/gallery" className="text-white hover:text-gray-300">
               Beer Gallery
             </Link>
-            <Link to="/Test1" className="text-white hover:text-gray-300">
-              Test1
-            </Link>
-            <Link to="/Test2" className="text-white hover:text-gray-300">
-              Test2
-            </Link>
           </div>
         </div>
       </nav>
