@@ -71,26 +71,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
-ul.nav-bar {
-  list-style: none;
-  margin: 0;
-  position: fixed;
-  top: 0;
-}
-
-.nav-bar li {
-  display: flex;
-  justify-content: center;
-  padding: 0.5em;
-}
-
-.nav-bar a {
-  color: #646cff;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-.nav-bar a:hover {
-  color: #f9f9f9;
-}
