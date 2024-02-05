@@ -14,18 +14,27 @@ export function TitlebarBelowImageList() {
   }
 
   return (
-    <ImageList sx={{ width: 1400 }} cols={4} rowHeight={250} gap={10}>
+    <ImageList
+      sx={{ width: 1300, margin: 5 }}
+      cols={4}
+      rowHeight={250}
+      gap={10}
+    >
       {beerData.map((item, index) => (
         <Link
           key={index}
           to={item.id.toString()}
-          style={{ textDecoration: "none", fontWeight: "bold" }}
+          style={{
+            textDecoration: "none",
+            fontWeight: "bold",
+            color: "#1976d2",
+          }}
         >
           <ImageListItem
             key={item.image_url}
             style={{
               textAlign: "center",
-              border: "1px black solid",
+              border: "1px #1976d2 solid",
               borderRadius: "10px",
               padding: 5,
             }}
