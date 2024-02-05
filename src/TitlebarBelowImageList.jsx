@@ -2,7 +2,6 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import { CircularColor } from "./CircularColor";
-
 import { useContext } from "react";
 import { BeerContext } from "../Context/BeerContext";
 import { Link } from "react-router-dom";
@@ -14,12 +13,23 @@ export function TitlebarBelowImageList() {
     return <CircularColor />;
   }
 
-  console.log(beerData);
   return (
     <ImageList sx={{ width: 1400 }} cols={4} rowHeight={250} gap={10}>
       {beerData.map((item, index) => (
-        <Link key={index} to={item.id.toString()}>
-          <ImageListItem key={item.image_url} style={{ textAlign: "center" }}>
+        <Link
+          key={index}
+          to={item.id.toString()}
+          style={{ textDecoration: "none", fontWeight: "bold" }}
+        >
+          <ImageListItem
+            key={item.image_url}
+            style={{
+              textAlign: "center",
+              border: "1px black solid",
+              borderRadius: "10px",
+              padding: 5,
+            }}
+          >
             <div>
               <img
                 src={`${item.image_url}?w=248&fit=crop&auto=format`}
@@ -28,12 +38,7 @@ export function TitlebarBelowImageList() {
                 style={{ maxHeight: 200, maxWidth: 200 }}
               />
             </div>
-            <ImageListItemBar
-              title={item.name}
-              s
-              position="below"
-              style={{ textDecoration: "none" }}
-            />
+            <ImageListItemBar title={item.name} position="below" />
           </ImageListItem>
         </Link>
       ))}

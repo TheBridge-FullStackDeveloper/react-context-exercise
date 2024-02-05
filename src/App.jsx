@@ -1,10 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-
-import { Navbar } from "./Navbar";
 import { SearchAppBar } from "./SearchAppBar";
-import { Index } from "./Index";
 import { TitlebarBelowImageList } from "./TitlebarBelowImageList";
-import { BeerDetail } from "./BeerDetail";
 import { MediaCard } from "./MediaCard";
 
 export function App() {

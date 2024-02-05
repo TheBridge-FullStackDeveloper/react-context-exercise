@@ -2,7 +2,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-
+import { CircularColor } from "./CircularColor";
 import { useContext } from "react";
 import { BeerContext } from "../Context/BeerContext";
 import { useParams } from "react-router-dom";
@@ -12,12 +12,10 @@ export function MediaCard() {
   const { id } = useParams();
 
   if (isLoading) {
-    return <h1>Loading your beer</h1>;
+    return <CircularColor />;
   }
 
   const beer = beerData?.find((beerItem) => beerItem.id === Number(id));
-
-  console.log(beer);
 
   if (!beer) {
     return <p>Beer not found</p>;
@@ -63,7 +61,7 @@ export function MediaCard() {
             <b>Description:</b> {beer.description}
           </p>
           <p>
-            <b>Abv:</b> {beer.abv}
+            <b>Alcohol By Volume:</b> {beer.abv} %
           </p>
           <p>
             <b>Volume:</b> {beer.volume.value} litres
