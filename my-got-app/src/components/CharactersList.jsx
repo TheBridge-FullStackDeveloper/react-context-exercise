@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CharacterContext } from '../CharacterContext';
+import './CharactersList.css'; 
 
 function CharactersList() {
   const { characters } = useContext(CharacterContext);

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CharacterContext } from '../CharacterContext';
+import './CharacterDetails.css'; 
 
 function CharacterDetails() {
   const { characterId } = useParams();
