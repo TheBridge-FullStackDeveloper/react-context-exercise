@@ -11,6 +11,11 @@
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.2s;
+    height: 400px; /* Altura fija para todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .character-card:hover {
@@ -19,8 +24,8 @@
   }
   
   .character-card img {
-    width: 100%;
-    height: 300px;
+    width: 100%; /* Ajuste de ancho al 100% del contenedor */
+    height: 70%; /* Ajuste de altura a un porcentaje fijo */
     object-fit: cover;
   }
   
