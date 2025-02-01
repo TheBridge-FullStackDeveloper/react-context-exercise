@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { CharacterContext } from '../CharacterContext';
+import { CharacterContext } from '../context/CharacterContext';
 import './CharacterDetails.css'; 
 
 function CharacterDetails() {

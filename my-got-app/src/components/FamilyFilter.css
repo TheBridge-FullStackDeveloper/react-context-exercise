@@ -1,0 +1,32 @@
+.family-filter-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .family-filter-label {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #495057;
+  }
+  
+  .family-filter-select {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+    color: #495057;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .family-filter-select:hover,
+  .family-filter-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  }
+  

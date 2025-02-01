@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import CharactersList from './components/CharactersList';
 import CharacterDetails from './components/CharacterDetails';
-import { CharacterProvider } from './CharacterContext';
+import { CharacterProvider } from './context/CharacterContext';
 
 function App() {
   return (
