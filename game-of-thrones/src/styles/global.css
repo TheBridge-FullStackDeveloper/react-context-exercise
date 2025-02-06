@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  background: #222;
+  font-family: system-ui;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.got-title {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.loading {
+  color: white;
+}
+
+.character-list {
+  color: white;
+  list-style: none;
+  cursor:pointer
+}
