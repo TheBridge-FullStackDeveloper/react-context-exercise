@@ -10,15 +10,31 @@ body {
 .got-title {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   color: white;
 }
+
 
 .loading {
   color: white;
 }
 
 .character-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-list h3{
+  margin: 10px;
+}
+
+.character-list a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
+  text-decoration: none;
   list-style: none;
   cursor:pointer
 }
